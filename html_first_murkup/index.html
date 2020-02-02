@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Web task</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<!--Navigation-->
+<nav class="navbar custom-navbar navbar-expand-lg navbar-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand py-0" href="#"> <!--brand part-->
+        <div class="d-flex justify-content-end align-items-center edited-brand">
+            <div class="icon-home-icon"></div>
+            <div class="navbar-text edited-nav-brand-font py-0">HOME<span class="noPadding custom-color">61</span></div>
+            <div class="label custom-back-color text-uppercase edited-label">beta</div>
+        </div>
+    </a><!--brand part-->
+    <div class="justify-content-start align-items-center"> <!--phone number part-->
+        <ul class="navbar-nav text-white phone-part">
+            <li class="nav-item vertical-divider divide-brand"></li>
+            <li class="nav-item">
+                <div class="icon-phone px-0"></div>
+            </li>
+            <li class="nav-item navbar-text custom-light-color phone-style">+1 (844) 843-6161</li>
+        </ul>
+    </div> <!--phone number part-->
+    <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarToggler"> <!--navugation menu-->
+        <ul class="navbar-nav edited-navbar-nav custom-light-color">
+            <!--<li class="nav-item phone-menu">
+                +1 (844) 843-6161
+            </li>-->
+            <li class="nav-item">
+                <a class="nav-link" href="#">Rentals</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Sales</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">My Homes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">My Calendar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Neighborhoods</a>
+            </li>
+            <li class="nav-item vertical-divider divide-nav"></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle profile-link" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="img/profile_photo.png" class="profile-image rounded-circle">
+                    <span class="profile-text">My Profile</span>
+                </a>
+                <div class="dropdown-menu custom-dropdown-menu"  aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#"><span class="custom-second-font">Bookmarks</span></a>
+                    <a class="dropdown-item" href="#"><span class="custom-second-font">Properties</span></a>
+                    <a class="dropdown-item" href="#"><span class="custom-second-font">Sign out</span></a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Post your listings</a>
+            </li>
+        </ul>
+    </div> <!--navigation menu-->
+</nav>
+<!--Navigation-->
+
+<!--Main area-->
+<div class="container-fluid main-area">
+    <div class="row"> <!--main area row-->
+        <div class="container-fluid"> <!--form container-->
+            <div class="row"> <!--text row-->
+                <div class="uppestText">
+                    <p class="custom-second-font font-weight-bold breadcrumbs-font">HOME <span class="fa fa-caret-right"></span> RENTAL APPLICATION</p>
+                    <div class="headers-font">
+                        <h1>Rental Application</h1>
+                    </div>
+                </div>
+            </div> <!--text row-->
+            <div class="row py-3"> <!--form rows-->
+                <div class="col-12 col-md-12 col-lg-7 col-xl-7 bowlBorder">
+                    <div class="col-12 col-lg-11 col-xl-11">
+                        <form action="#" method="get">
+                            <p class="headers-font">Personal information</p>
+                            <div class="row"> <!--personal info row-->
+                                <div class="col-12 persinfo">
+                                    <div class="row custom-col-spacing"> <!--first row-->
+                                        <div class="form-group col-11 col-sm-11 col-md-10 col-lg-6 col-xl-4">
+                                            <label for="inputfname">FIRST NAME</label>
+                                            <input type="text" class="form-control edited-form-control" id="inputfname" name="fname" placeholder="Enter first name">
+                                        </div>
+                                        <div class="form-group col-11 col-sm-11 col-md-10 col-lg-6 col-xl-4">
+                                            <label for="inputlname">LAST NAME</label>
+                                            <input type="text" class="form-control edited-form-control" id="inputlname" name="lname" placeholder="Enter last name">
+                                        </div>
+                                        <div class="form-group col-11 col-sm-11 col-md-10 col-lg-12 col-xl-4 third-col"> <!--date of birth-->
+                                            <label for="inputDOB">DATE OF BIRTH</label>
+                                            <div class="row noPadding edited-btn-group" id="inputDOB">
+                                                <div class="col-12 col-sm-3 col-xl-3 noPadding">
+                                                    <div class="form-group inputs-font">
+                                                        <select class="selectpicker form-control" data-style="edited-select inputs-font" name="birth_day" title="Day">
+                                                            <option class="styled">1</option>
+                                                            <option class="styled">2</option>
+                                                            <option class="styled">3</option>
+                                                            <option class="styled">4</option>
+                                                            <option class="styled">5</option>
+                                                            <option class="styled">6</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-xl-6 month-btn">
+                                                    <div class="form-group">
+                                                        <select class="selectpicker form-control" data-style="edited-select inputs-font" name="birth_month" title="Month">
+                                                            <option class="styled">January</option>
+                                                            <option class="styled">February</option>
+                                                            <option class="styled">May</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-3 col-xl-3 noPadding">
+                                                    <div class="form-group">
+                                                        <select class="selectpicker form-control" data-style="edited-select inputs-font" name="birth_year" title="Year">
+                                                            <option class="styled">1999</option>
+                                                            <option class="styled">1998</option>
+                                                            <option class="styled">1997</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> <!--date of birth-->
+                                    </div><!--first row-->
+                                    <div class="row custom-col-spacing"> <!--second row-->
+                                        <div class="form-group col-11 col-sm-11 col-md-10 col-lg-6 col-xl-4">
+                                            <label for="inputcellphone">CELL PHONE</label>
+                                            <input type="tel" class="form-control edited-form-control" id="inputcellphone" name="cellphone" placeholder="ex: 123-567-8999">
+                                        </div>
+                                        <div class="form-group col-11 col-sm-11 col-md-10 col-lg-6 col-xl-4">
+                                            <label for="inputworkphone">WORK PHONE</label>
+                                            <input type="tel" class="form-control edited-form-control" id="inputworkphone" name="workphone" placeholder="ex: 123-567-8999">
+                                        </div>
+                                        <div class="form-group col-11 col-sm-11 col-md-10 col-lg-12 col-xl-4 third-col">
+                                            <label for="inputgross">GROSS INCOME</label>
+                                            <div class="row noPadding igross" id="inputgross">
+                                               <div class="col-7 col-sm-8 noPadding">
+                                                    <input type="text" class="form-control edited-form-control gross-input" name= "income" placeholder="ex: 20.000">
+                                                </div>
+                                                <div class="col-5 col-sm-4 noPadding btn-gross">
+                                                    <div class="form-group">
+                                                        <select class="selectpicker form-control" data-style="edited-select inputs-font income-select first-income" name="incomeperiod" title="Month">
+                                                            <option class="styled">Month</option>
+                                                            <option class="styled">Year</option>
+                                                            <option class="styled">Day</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!--second row-->
+                                </div>
+                            </div> <!--personal info row-->
+                            <p class="second-header-font">Other Proposed Occupant:</p>
+                            <div class="row"> <!--other occupant row-->
+                                <div class="col-12 occupant-row">
+                                    <div class="row custom-col-spacing"><!--first row-->
+                                        <div class="form-group col-11 col-sm-11 col-md-10 col-lg-6 col-xl-4">
+                                            <label for="inputfname2">FIRST NAME</label>
+                                            <input type="text" class="form-control edited-form-control" id="inputfname2" name="fname2" placeholder="Enter first name">
+                                        </div>
+                                        <div class="form-group col-11 col-sm-11 col-md-10 col-lg-6 col-xl-4">
+                                            <label for="inputlname2">LAST NAME</label>
+                                            <input type="text" class="form-control edited-form-control" id="inputlname2" name="lname2" placeholder="Enter last name">
+                                        </div>
+                                        <div class="form-group col-11 col-sm-11 col-md-10 col-lg-12 col-xl-4 third-col">
+                                            <label for="inputgross2">GROSS INCOME</label>
+                                            <div class="row noPadding igross" id="inputgross2">
+                                                <div class="col-7 col-sm-8 noPadding">
+                                                    <input type="text" class="form-control edited-form-control gross-input" name="income2" placeholder="ex: 20.000">
+                                                </div>
+                                                <div class="col-5 col-sm-4 noPadding">
+                                                    <div class="form-group">
+                                                        <select class="selectpicker form-control" data-style="edited-select inputs-font income-select" name="incomeperiod2" title="Month">
+                                                            <option class="styled">Month</option>
+                                                            <option class="styled">Year</option>
+                                                            <option class="styled">Day</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!--first row-->
+                                    <div class="row"><!--second row for text-->
+                                        <div class="col-12">
+                                            <label for="inputRelation">RELATION</label>
+                                        </div>
+                                    </div><!--second row for text-->
+                                    <div class="row custom-col-spacing"><!--third row-->
+                                        <div class="form-group col-11 col-sm-11 col-md-10 col-lg-6 col-xl-4 noPadding">
+                                            <div class="col-12" id="inputRelation">
+                                                <div class="form-group">
+                                                    <select class="selectpicker form-control" data-style="edited-select text-dark font-weight-bold spouse-spacing" name="relation" title="Spouse">
+                                                        <option class="styled">Spouse</option>
+                                                        <option class="styled">Roommate</option>
+                                                        <option class="styled">Friend</option>
+                                                        <option class="styled">Slave</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-11 col-sm-11 col-md-10 col-lg-6 col-xl-4 spouse-name">
+                                            <input type="text" class="form-control edited-form-control" id="inputname3" name="name3" placeholder="Irina Marin">
+                                        </div>
+                                    </div><!--third row-->
+                                </div>
+                            </div> <!--other occupant row-->
+                            <p class="headers-font">Rental history</p>
+                            <div class="row"> <!--rental history row-->
+                                <div class="col-sm-12 rental-row">
+                                    <div class="row custom-col-spacing"> <!--first row-->
+                                        <div class="form-group col-11 col-sm-11 col-md-10 col-lg-12 col-xl-12">
+                                            <label for="inputaddress">PREVIOUS ADDRESS</label>
+                                            <input type="text" class="form-control edited-form-control" id="inputaddress" name="address" placeholder="Enter address">
+                                        </div>
+                                    </div><!--first row-->
+                                    <div class="row custom-col-spacing"> <!--second row-->
+                                        <div class="form-group col-11 col-sm-11 col-md-10 col-lg-6 col-xl-4">
+                                            <label for="inputcity">CITY</label>
+                                            <input type="text" class="form-control edited-form-control" id="inputcity" name="city" placeholder="ex: Miami">
+                                        </div>
+                                        <div class="form-group col-11 col-sm-11 col-md-10 col-lg-6 col-xl-4">
+                                            <label for="inputphone">PHONE</label>
+                                            <input type="tel" class="form-control edited-form-control" id="inputphone" name="phone" placeholder="ex: 123-567-8999">
+                                        </div>
+                                        <div class="form-group col-11 col-sm-11 col-md-10 col-lg-6 col-xl-4 third-col">
+                                            <label for="inputstate">STATE</label>
+                                            <input type="text" class="form-control edited-form-control" id="inputstate" name="state" placeholder="ex: MI">
+                                        </div>
+                                    <!--</div>--><!--second row-->
+                                    <!--<div class="row" style="margin-top: 0.2%;">--><!-- merged rows for the responsive porpuse --><!--third row-->
+                                        <div class="form-group col-11 col-sm-11 col-md-10 col-lg-6 col-xl-4 zip-row-mt">
+                                            <label for="inputzip">ZIP CODE</label>
+                                            <input type="text" class="form-control edited-form-control" id="inputzip" name="zipcode" placeholder="ex: 11111">
+                                        </div>
+                                        <div class="form-group col-11 col-sm-11 col-md-10 col-lg-12 col-xl-4 zip-row-mt">
+                                            <label for="inputDOB">DATE IN</label>
+                                            <div class="row noPadding edited-btn-group" id="inputDateaIn">
+                                                <div class="col-12 col-sm-3 col-xl-3 noPadding" >
+                                                    <div class="form-group">
+                                                        <select class="selectpicker form-control" data-style="edited-select inputs-font" name="in_day" title="Day">
+                                                            <option class="styled">1</option>
+                                                            <option class="styled">2</option>
+                                                            <option class="styled">3</option>
+                                                            <option class="styled">4</option>
+                                                            <option class="styled">5</option>
+                                                            <option class="styled">6</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-xl-6 month-btn">
+                                                    <div class="form-group">
+                                                        <select class="selectpicker form-control" data-style="edited-select inputs-font" name="in_month" title="Month">
+                                                            <option class="styled">January</option>
+                                                            <option class="styled">February</option>
+                                                            <option class="styled">May</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-3 col-xl-3 noPadding">
+                                                    <div class="form-group">
+                                                        <select class="selectpicker form-control" data-style="edited-select inputs-font" name="in_year" title="Year">
+                                                            <option class="styled">1999</option>
+                                                            <option class="styled">1998</option>
+                                                            <option class="styled">1997</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-11 col-sm-11 col-md-10 col-lg-12 col-xl-4 zip-row-mt third-col">
+                                            <label for="inputDOB">DATE OUT</label>
+                                            <div class="row noPadding edited-btn-group" id="inputDateaOut">
+                                                <div class="col-12 col-sm-3 col-xl-3 noPadding" >
+                                                    <div class="form-group">
+                                                        <select class="selectpicker form-control" data-style="edited-select inputs-font" name="out_day" title="Day">
+                                                            <option class="styled">1</option>
+                                                            <option class="styled">2</option>
+                                                            <option class="styled">3</option>
+                                                            <option class="styled">4</option>
+                                                            <option class="styled">5</option>
+                                                            <option class="styled">6</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-xl-6 month-btn">
+                                                    <div class="form-group">
+                                                        <select class="selectpicker form-control" data-style="edited-select inputs-font" name="out_month" title="Month">
+                                                            <option class="styled">January</option>
+                                                            <option class="styled">February</option>
+                                                            <option class="styled">May</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-3 col-xl-3 noPadding">
+                                                    <div class="form-group">
+                                                        <select class="selectpicker form-control" data-style="edited-select inputs-font" name="out_year" title="Year">
+                                                            <option class="styled">1999</option>
+                                                            <option class="styled">1998</option>
+                                                            <option class="styled">1997</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!--third row-->
+                                    <div class="row custom-col-spacing"> <!--fourth row-->
+                                        <div class="form-group col-11 col-sm-11 col-md-10 col-lg-12 col-xl-12">
+                                            <label for="inputReason">REASON FOR MOVING</label>
+                                            <textarea class="form-control edited-form-control" id="inputReason" name="reason" rows="5" style="resize: none"> </textarea>
+                                        </div>
+                                    </div><!--fourth row-->
+                                </div>
+                            </div> <!--rental history row-->
+                            <p class="headers-font">Employment information</p>
+                            <div class="row"> <!--employment info row-->
+                                <div class="col-12 employment-row">
+                                    <div class="row custom-col-spacing"> <!--first row-->
+                                        <div class="form-group col-11 col-sm-11 col-md-10 col-lg-12 col-xl-12">
+                                            <label for="inputSource">PRESENT OCCUPATION OR SOURCE OF INCOME</label>
+                                            <input type="text" class="form-control edited-form-control" id="inputSource" name="sourcename" placeholder="Enter address">
+                                        </div>
+                                    </div><!--first row-->
+                                    <div class="row custom-col-spacing"> <!--second row-->
+                                        <div class="form-group col-11 col-sm-11 col-md-10 col-lg-12 col-xl-4">
+                                            <label for="inputStart">START DATE</label>
+                                            <div class="row noPadding edited-btn-group" id="inputStart">
+                                                <div class="col-12 col-sm-3 col-xl-3 noPadding" >
+                                                    <div class="form-group">
+                                                        <select class="selectpicker form-control edited-form-control" data-style="edited-select inputs-font" name="start_day" title="Day">
+                                                            <option class="styled">1</option>
+                                                            <option class="styled">2</option>
+                                                            <option class="styled">3</option>
+                                                            <option class="styled">4</option>
+                                                            <option class="styled">5</option>
+                                                            <option class="styled">6</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-xl-6 month-btn">
+                                                    <div class="form-group">
+                                                        <select class="selectpicker form-control edited-form-control" data-style="edited-select inputs-font" name="start_month" title="Month">
+                                                            <option class="styled">January</option>
+                                                            <option class="styled">February</option>
+                                                            <option class="styled">May</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-3 col-xl-3 noPadding">
+                                                    <div class="form-group">
+                                                        <select class="selectpicker form-control edited-form-control" data-style="edited-select inputs-font" name="start_year" title="Year">
+                                                            <option class="styled">1999</option>
+                                                            <option class="styled">1998</option>
+                                                            <option class="styled">1997</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-11 col-sm-11 col-md-10 col-lg-6 col-xl-4">
+                                            <label for="inputEmplName">EMPLOYER NAME</label>
+                                            <input type="tel" class="form-control edited-form-control" id="inputEmplName" name="emplname" placeholder="ex: John Doe">
+                                        </div>
+                                        <div class="form-group col-11 col-sm-11 col-md-10 col-lg-6 col-xl-4 third-col">
+                                            <label for="inputEmplPhone">EMPLOYER PHONE</label>
+                                            <input type="tel" class="form-control edited-form-control" id="inputEmplPhone" name="workphone" placeholder="ex: MI">
+                                        </div>
+                                    </div><!--second row-->
+                                    <div class="row custom-col-spacing"> <!--third row-->
+                                        <div class="form-group col-11 col-sm-11 col-md-10 col-lg-12 col-xl-12">
+                                            <label for="inputEmplAddr">EMPLOYER ADDRESS</label>
+                                            <input type="text" class="form-control edited-form-control" id="inputEmplAddr" name="empladdr" placeholder="Enter address">
+                                        </div>
+                                    </div><!--third row-->
+                                </div>
+                            </div> <!--employment info row-->
+                            <div class="row custom-col-spacing btn-row"> <!--button row-->
+                                <div class="col-11 col-sm-11 col-md-10 col-lg-12 col-xl-12 text-right">
+                                    <button type="submit" class="btn btn-primary custom-back-color form-right custom-submit-button">Submit</button>
+                                </div>
+                            </div> <!--button row-->
+                        </form>
+                    </div>
+                </div>
+            </div> <!--form rows-->
+        </div> <!--form container-->
+    </div> <!--main area row-->
+</div>
+<!--Main area-->
+
+<!-- Footer -->
+<footer class="page-footer font-small container-fluid text-justify">
+    <div class="row footer-back-color-light custom-col-spacing"> <!-- light footer row -->
+        <div class="col-lg-10 offset-lg-1 col-xl-10 offset-xl-1">
+            <div class="row"> <!--content row-->
+                <div class="col-12 col-md-4">
+                    <p class="text-uppercase custom-second-font footer-headers-font font-weight-bold">South Beach Condo and Apartments</p>
+                    <p class="custom-white-color footer-header-address-text">114 East 98th Street, Unit 4W<br/>900 Byscayne, Brickell<br/>1220 Dixie Highway, Coral Gables</p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <p class="text-uppercase custom-second-font footer-headers-font font-weight-bold">North Miami Condo and Apartments</p>
+                    <p class="custom-white-color footer-header-address-text">114 East 98th Street, Unit 4W<br/>900 Byscayne, Brickell<br/>1220 Dixie Highway, Coral Gables</p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <p class="text-uppercase custom-second-font footer-headers-font font-weight-bold">Downtown Miami Condo and Apartments</p>
+                    <p class="custom-white-color footer-header-address-text">114 East 98th Street, Unit 4W<br/>900 Byscayne, Brickell<br/>1220 Dixie Highway, Coral Gables</p>
+                </div>
+            </div> <!--addresses row-->
+        </div>
+    </div> <!-- light footer row -->
+
+    <div class="row footer-copyright custom-col-spacing"> <!-- Copyright & social icons part-->
+        <div class="col-12 col-md-8 col-lg-7 offset-lg-1 col-xl-7 offset-xl-1"> <!--column for footer links and copyright-->
+          <div class="custom-white-color">
+            <ul class="list-inline footer-links">
+                <li class="list-inline-item"><a href="#">Team</a></li>
+                <li class="list-inline-item"><a href="#">How it works</a></li>
+                <li class="list-inline-item"><a href="#">Partner</a></li>
+                <li class="list-inline-item"><a href="#">FAQ</a></li>
+                <li class="list-inline-item"><a href="#">Terms & Services</a></li>
+                <li class="list-inline-item"><a href="#">Contact</a></li>
+            </ul>
+          </div>
+            <div class="copyright-font"> <!--copyright text-->
+                2014 © HOME<span class="custom-color">61</span>. All Rights Reserved.
+            </div> <!--copyright text-->
+        </div> <!--column for footer links and copyright-->
+        <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 social-part"> <!--column for social networks icons-->
+            <div class="d-flex align-items-center">
+                <div>
+                <ul class="list-inline items-lighter">
+                    <li class="list-inline-item icon-linked-link"><a href="#"></a></li>
+                    <li class="list-inline-item icon-google-link"><a href="#"></a></li>
+                    <li class="list-inline-item icon-twiter-link"><a href="#"></a></li>
+                    <li class="list-inline-item icon-fb-link"><a href="#"></a></li>
+                </ul>
+                </div>
+            </div>
+        </div> <!--column for social networks icons-->
+  </div> <!-- Copyright & social icons part-->
+    <div class="row text-center lowest-row"> <!-- The lowest text part -->
+        <div class="col-12 lowest-text">
+            <ul class="list-inline">
+                <li class="list-inline-item icon-home-footer"></li>
+                <li class="list-inline-item">Fair Housing & Equal Opportunity</li>
+            </ul>
+            <div>Information deemed reliable but not guaranteed to be accurate.</div>
+            <div>The real estate listing data marked with this icon IDX comes from the SouthEast-Florida Regional Multiple Listing Service system.</div>
+        </div>
+    </div> <!-- The lowest text part -->
+</footer>
+<!-- Footer -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="js/bootstrap-select.js"></script>
+
+
+
+
+</body>
+</html>

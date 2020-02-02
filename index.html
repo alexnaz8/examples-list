@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Demos</title>
+        <link
+            href="https://fonts.googleapis.com/css?family=Uncial+Antiqua&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body,
+            html {
+                height: 100%;
+            }
+            body {
+                margin: 0;
+                font-family: "Uncial Antiqua";
+            }
+            .conteiner {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .background {
+                height: 98%;
+                width: 98%;
+                background: rgb(47, 31, 29);
+                background: linear-gradient(
+                    0deg,
+                    rgba(47, 31, 29, 1) 0%,
+                    rgba(124, 76, 39, 1) 100%
+                );
+                background: url("https://www.hdwallpaper.nu/wp-content/uploads/2015/04/middle-earth-the-lord-of-the-rings-digital-art-hd-wallpaper-1920x1200-8396.jpg");
+                background-position: center;
+                background-size: cover;
+                filter: blur(4px);
+                -webkit-filter: blur(4px);
+            }
+            .content {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            header {
+                color: #f3f3f3;
+                text-align: center;
+            }
+            .link {
+                text-align: center;
+                text-transform: uppercase;
+                max-width: 300px;
+                padding: 10px 10px;
+                margin: 10px auto;
+                border: 1px #ccc solid;
+                border-radius: 5px;
+                background: rgb(78, 44, 32);
+                opacity: 0.8;
+            }
+            .link a {
+                text-decoration: none;
+                color: #f9e370;
+            }
+            .link:hover {
+                opacity: 0.9;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="conteiner">
+            <div class="background"></div>
+            <div class="content">
+                <header>
+                    <h1>Some Demos</h1>
+                </header>
+
+                <div class="link">
+                    <a href="./html_first_murkup/index.html">Just MarkUp</a>
+                </div>
+                <div class="link">
+                    <a href="./html_second_murkup/index.html"
+                        >More interesting MarkUp</a
+                    >
+                </div>
+                <div class="link">
+                    <a href="https://alexnaz8.github.io/fun-monster-test/"
+                        >Just React Fun</a
+                    >
+                </div>
+                <div class="link">
+                    <a href="https://alexnaz8.github.io/monobank-exchange-demo/"
+                        >MonoBank exchange rate</a
+                    >
+                </div>
+                <div class="link">
+                    <a href="https://alexnaz8.github.io/firebase-saga-auth/"
+                        >Firestore Form with Auth</a
+                    >
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
