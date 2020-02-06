@@ -21,6 +21,15 @@
             body * {
                 overflow: hidden;
             }
+            button {
+                border-radius: 5px;
+                font-family: "Uncial Antiqua";
+                opacity: 0.5;
+                outline: none;
+            }
+            button:hover{
+                cursor: pointer;
+            }
             .conteiner {
                 background-color: #ccc;
                 height: 100%;
@@ -76,13 +85,72 @@
             .link:hover a {
                 opacity: 1;
             }
+
+            .lotr .conteiner {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .lotr .background {
+                height: 98%;
+                width: 98%;
+                background: rgb(47, 31, 29);
+                background: linear-gradient(
+                    0deg,
+                    rgba(47, 31, 29, 1) 0%,
+                    rgba(124, 76, 39, 1) 100%
+                );
+                background: url("https://www.hdwallpaper.nu/wp-content/uploads/2015/04/middle-earth-the-lord-of-the-rings-digital-art-hd-wallpaper-1920x1200-8396.jpg");
+                background-position: center;
+                background-size: cover;
+                filter: blur(4px);
+                -webkit-filter: blur(4px);
+            }
+            .lotr .content {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .lotr header {
+                color: #f3f3f3;
+                text-align: center;
+            }
+            .lotr .link {
+                text-align: center;
+                text-transform: uppercase;
+                height: auto;
+                width: 350px;
+                max-width: 350px;
+                padding: 10px 10px;
+                margin: 10px auto;
+                border: 1px #ccc solid;
+                border-radius: 5px;
+                background: rgb(78, 44, 32);
+                opacity: 0.8;
+                box-shadow: none;
+                transition: none;
+            }
+            .lotr .link a {
+                text-decoration: none;
+                color: #f9e370;
+                opacity: 1;
+            }
+            .lotr .link:hover {
+                opacity: 0.9;
+                cursor: pointer;
+            }
         </style>
     </head>
     <body>
         <div class="conteiner">
+            <div class="background"></div>
             <div class="content">
                 <header>
                     <h1>Some Demos</h1>
+                    <button>click me</button>
                 </header>
                 <div class="links-box">
                     <div class="link">
@@ -113,63 +181,77 @@
             </div>
         </div>
         <script>
-            const header = document.querySelector("header");
-            const linksBox = document.querySelector(".links-box");
-            const links = document.querySelectorAll(".link");
-            let startAnimation = 0;
-            let animate = true;
-            const setItemsMiddle = () => {
-                animate = false;
-                const partOfHeight = Math.floor(
-                    (100 * (linksBox.offsetHeight / (links.length + 1))) /
-                        linksBox.offsetHeight
-                );
-                links.forEach((linkItem, index) =>
-                    linkItem.setAttribute(
-                        "style",
-                        `position:absolute;
+            let theme = "lotr";
+            document.body.classList.add("lotr");
+            const btn = document.querySelector("button");
+            btn.addEventListener("click", () => {
+                if (theme !== "lotr") {
+                    theme = "lotr";
+                    document.body.classList.add("lotr");
+                } else {
+                    theme = "animated";
+                    document.body.classList.remove("lotr");
+                    animatedTheme();
+                }
+            });
+
+            const animatedTheme = () => {
+                const header = document.querySelector("header");
+                const linksBox = document.querySelector(".links-box");
+                const links = document.querySelectorAll(".link");
+                let startAnimation = 0;
+                let animate = true;
+                const setItemsMiddle = () => {
+                    animate = false;
+                    const partOfHeight = Math.floor(
+                        (100 * (linksBox.offsetHeight / (links.length + 1))) /
+                            linksBox.offsetHeight
+                    );
+                    links.forEach((linkItem, index) =>
+                        linkItem.setAttribute(
+                            "style",
+                            `position:absolute;
                         top:${partOfHeight * (index + 1)}%;
                         left:${Math.floor(linksBox.offsetWidth / 2)}px;
                         transform:translate(-50%,-50%);`
-                    )
-                );
-            };
-            const setAbsoluteStyle = () => {
-                const top = Math.floor(
-                    Math.random() * (linksBox.offsetHeight + 1)
-                );
-                const left = Math.floor(
-                    Math.random() * (linksBox.offsetWidth + 1)
-                );
-                return `position:absolute; top:${top}px; left:${left}px; transition:all 4s cubic-bezier(0.91, 0.29, 0.13, 1.26)`;
-            };
-            const animateItems = timestamp => {
-                if (!animate) return;
-                if (!startAnimation) start = timestamp;
-                if (timestamp - startAnimation > 1000) {
-                    links.forEach(linkItem =>
-                        linkItem.setAttribute(
-                            "style",
-                            setAbsoluteStyle()
                         )
                     );
-                    startAnimation = timestamp;
+                };
+                const setAbsoluteStyle = () => {
+                    const top = Math.floor(
+                        Math.random() * (linksBox.offsetHeight + 1)
+                    );
+                    const left = Math.floor(
+                        Math.random() * (linksBox.offsetWidth + 1)
+                    );
+                    return `position:absolute; top:${top}px; left:${left}px; transition:all 4s cubic-bezier(0.91, 0.29, 0.13, 1.26)`;
+                };
+                const animateItems = timestamp => {
+                    if (theme === "lotr") setItemsMiddle();
+                    if (!animate) return;
+                    if (!startAnimation) start = timestamp;
+                    if (timestamp - startAnimation > 1000) {
+                        links.forEach(linkItem =>
+                            linkItem.setAttribute("style", setAbsoluteStyle())
+                        );
+                        startAnimation = timestamp;
+                    }
+                    window.requestAnimationFrame(animateItems);
+                };
+
+                linksBox.addEventListener("mouseenter", setItemsMiddle);
+                linksBox.addEventListener("mouseleave", () => {
+                    animate = true;
+                    window.requestAnimationFrame(animateItems);
+                });
+                links.forEach(linkItem =>
+                    linkItem.setAttribute("style", setAbsoluteStyle())
+                );
+
+                if (animate) {
+                    window.requestAnimationFrame(animateItems);
                 }
-                window.requestAnimationFrame(animateItems);
             };
-
-            linksBox.addEventListener("mouseenter", setItemsMiddle);
-            linksBox.addEventListener("mouseleave", () => {
-                animate = true;
-                window.requestAnimationFrame(animateItems);
-            });
-            links.forEach(linkItem =>
-                linkItem.setAttribute("style", setAbsoluteStyle())
-            );
-
-            if (animate) {
-                window.requestAnimationFrame(animateItems);
-            }
         </script>
     </body>
 </html>
