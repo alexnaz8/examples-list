@@ -27,7 +27,7 @@
                 opacity: 0.5;
                 outline: none;
             }
-            button:hover{
+            button:hover {
                 cursor: pointer;
             }
             .conteiner {
@@ -181,8 +181,12 @@
             </div>
         </div>
         <script>
-            let theme = "lotr";
-            document.body.classList.add("lotr");
+            let theme = localStorage.getItem("theme") || "lotr";
+            if(theme === "lotr"){
+                document.body.classList.add(theme);
+            }else{
+                runAnimatedTheme();
+            }
             const btn = document.querySelector("button");
             btn.addEventListener("click", () => {
                 if (theme !== "lotr") {
@@ -191,11 +195,12 @@
                 } else {
                     theme = "animated";
                     document.body.classList.remove("lotr");
-                    animatedTheme();
+                    runAnimatedTheme();
                 }
+                localStorage.setItem("theme", theme);
             });
 
-            const animatedTheme = () => {
+            function runAnimatedTheme() {
                 const header = document.querySelector("header");
                 const linksBox = document.querySelector(".links-box");
                 const links = document.querySelectorAll(".link");
