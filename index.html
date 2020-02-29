@@ -2,13 +2,18 @@
 <html lang="en">
     <head>
         <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158712122-1"></script>
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-158712122-1"
+        ></script>
         <script>
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
 
-            gtag('config', 'UA-158712122-1');
+            gtag("config", "UA-158712122-1");
         </script>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -186,14 +191,19 @@
                             >Firestore Form with Auth</a
                         >
                     </div>
+                    <div class="link">
+                        <a href="https://alexnaz8.github.io/js30d-challenge/"
+                            >Vanilla JS challenge</a
+                        >
+                    </div>
                 </div>
             </div>
         </div>
         <script>
             let theme = localStorage.getItem("theme") || "lotr";
-            if(theme === "lotr"){
+            if (theme === "lotr") {
                 document.body.classList.add(theme);
-            }else{
+            } else {
                 runAnimatedTheme();
             }
             const btn = document.querySelector("button");
@@ -265,7 +275,7 @@
                 if (animate) {
                     window.requestAnimationFrame(animateItems);
                 }
-            };
+            }
         </script>
     </body>
 </html>
